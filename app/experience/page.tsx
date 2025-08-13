@@ -17,20 +17,6 @@ export default function ExperiencePage() {
               <ArrowLeft size={20} />
               Back to Portfolio
             </Link>
-            <div className="hidden md:flex items-center gap-6 text-sm text-gray-600 dark:text-gray-400">
-              <div className="flex items-center gap-2">
-                <Clock size={16} />
-                <span>3+ Years Experience</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award size={16} />
-                <span>5 Different Roles</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp size={16} />
-                <span>Research & Development Focus</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -51,20 +37,6 @@ export default function ExperiencePage() {
             A comprehensive timeline of my professional journey, from research assistant roles 
             to software engineering internships, showcasing continuous growth and learning.
           </p>
-          
-          <div className="flex justify-center mt-8">
-            <div className="flex items-center gap-8 text-sm text-gray-500 dark:text-gray-400">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">2022</div>
-                <div>Started Journey</div>
-              </div>
-              <div className="w-16 h-px bg-gradient-to-r from-purple-400 to-blue-400"></div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">2025</div>
-                <div>Current Role</div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Timeline */}

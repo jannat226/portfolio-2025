@@ -20,18 +20,39 @@ export default function Home() {
         <FloatingParticles />
       </div>
       <SpiralCursor />
-      <Navbar />
       <motion.div
         initial={{ y: -4, filter: "blur(8px)" }}
         animate={{ y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="min-h-screen w-full max-w-6xl mx-auto flex flex-col pt-24 px-4 sm:px-6 lg:px-8 gap-8 relative z-10"
+        className="w-full relative z-10"
       >
-        <div id="home" className="scroll-mt-24"><Header /></div>
-        {/* <div id="about" className="scroll-mt-24"><About /></div> */}
-        <div id="experience" className="scroll-mt-24"><Experience /></div>
-        <div id="projects" className="scroll-mt-24"><Projects /></div>
-        <div id="techstack" className="scroll-mt-24"><TechStack /></div>
+        <div className="px-4 sm:px-6 lg:px-8 pt-8">
+          <Navbar />
+        </div>
+        
+        <div id="home" className="flex items-center justify-center px-4 sm:px-6 lg:px-8 pb-16">
+          <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-6 py-6 transition-colors duration-300 relative z-10 w-full">
+            <Header />
+            
+            {/* Spacer between Header and About */}
+            <div className="my-8 border-t border-gray-200 dark:border-gray-700"></div>
+            
+            {/* About Section */}
+            <About />
+          </div>
+        </div>
+        
+        <div id="experience" className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+          <Experience />
+        </div>
+        
+        <div id="projects" className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+          <Projects />
+        </div>
+        
+        <div id="techstack" className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
+          <TechStack />
+        </div>
       </motion.div>
     </>
   );

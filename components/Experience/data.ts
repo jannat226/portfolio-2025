@@ -9,7 +9,7 @@ interface Experience {
 export const experiences: Experience[] = [
   {
     title: "Research Assistant",
-    company: "Natural Language Processing Lab, Virginia Commonwealth University",
+    company: "NLP Lab, Virginia Commonwealth University",
     logo: "/company-logos/logo-1.png",
     date: "Jan 2025 – Present",
     description: [

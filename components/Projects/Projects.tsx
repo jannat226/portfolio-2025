@@ -1,195 +1,121 @@
 "use client";
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Github, ExternalLink, Calendar, Star, ArrowRight } from "lucide-react";
+import React from "react";
+import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { projects, type Project } from "./data";
 
 export default function Projects() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
-  const featuredProjects = projects.filter(project => project.featured);
-
   return (
-    <div className="section">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <p className="section-header mb-8">Projects</p>
-        
-        {/* Featured Projects */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {featuredProjects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                onHoverStart={() => setHoveredProject(project.id)}
-                onHoverEnd={() => setHoveredProject(null)}
-                className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 max-w-sm mx-auto"
-              >
-                {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
-                  {/* Status Badge */}
-                  <div className="absolute top-3 right-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                      project.status === 'Completed' 
-                        ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                        : project.status === 'In Progress'
-                        ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
-                        : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200'
-                    }`}>
-                      {project.status}
-                    </span>
-                  </div>
-
-                  {/* Year */}
-                  <div className="absolute bottom-3 left-3 flex items-center gap-1 text-white">
-                    <Calendar className="w-3 h-3" />
-                    <span className="text-xs font-medium">{project.year}</span>
-                  </div>
-                </div>
-
-                {/* Project Content */}
-                <div className="p-4">
-                  <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 dark:text-gray-300 mb-3 text-sm leading-relaxed line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-full text-xs">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-2">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors text-xs font-medium"
-                      >
-                        <Github className="w-3 h-3" />
-                        Code
-                      </a>
-                    )}
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 px-3 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-xs font-medium"
-                      >
-                        <ExternalLink className="w-3 h-3" />
-                        Live Demo
-                      </a>
-                    )}
-                  </div>
-                </div>
-
-                {/* Hover Effect Overlay */}
-                <AnimatePresence>
-                  {hoveredProject === project.id && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-sm flex items-center justify-center"
-                    >
-                      <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        exit={{ scale: 0.8, opacity: 0 }}
-                        className="text-center"
-                      >
-                        <div className="flex gap-3 items-center justify-center">
-                          {project.githubUrl && (
-                            <a
-                              href={project.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
-                            >
-                              <Github className="w-4 h-4" />
-                              View Code
-                            </a>
-                          )}
-                          {project.liveUrl && (
-                            <a
-                              href={project.liveUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-4 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
-                            >
-                              <ExternalLink className="w-4 h-4" />
-                              Live Demo
-                            </a>
-                          )}
-                        </div>
-                      </motion.div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
+    <section className="w-full h-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-full flex flex-col">
+        {/* Header */}
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            Featured Projects
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            AI/ML, web development, and automation projects showcasing my technical skills and problem-solving approach.
+          </p>
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-              Have a Project in Mind?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md mx-auto">
-              Let's collaborate and bring your ideas to life with cutting-edge technology and innovative solutions.
-            </p>
-            <a
-              href="mailto:your.email@example.com"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg"
-            >
-              Let's Work Together
-              <ArrowRight className="w-5 h-5" />
-            </a>
+        {/* Horizontal Scroll Container */}
+        <div className="flex-1 flex items-center">
+          <div className="overflow-x-auto custom-scrollbar w-full">
+            <div className="flex gap-4 sm:gap-6 pb-4" style={{ width: 'max-content' }}>
+              {projects.map((project, index) => (
+              <div
+                key={project.id}
+                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden group transition-all duration-300 flex-shrink-0 w-80 sm:w-96 lg:w-[420px]"
+              >
+              {/* Project Image */}
+              <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-all duration-500 filter grayscale group-hover:grayscale-0 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Status Badge */}
+                <div className="absolute top-3 right-3">
+                  <span className={`px-2 py-1 rounded text-xs font-medium backdrop-blur-sm transition-all duration-300 ${
+                    project.status === 'Completed' 
+                      ? 'bg-green-100/90 text-green-700 dark:bg-green-900/60 dark:text-green-400 group-hover:bg-green-200/95 dark:group-hover:bg-green-800/70'
+                      : project.status === 'In Progress'
+                      ? 'bg-blue-100/90 text-blue-700 dark:bg-blue-900/60 dark:text-blue-400 group-hover:bg-blue-200/95 dark:group-hover:bg-blue-800/70'
+                      : 'bg-yellow-100/90 text-yellow-700 dark:bg-yellow-900/60 dark:text-yellow-400 group-hover:bg-yellow-200/95 dark:group-hover:bg-yellow-800/70'
+                  }`}>
+                    {project.status}
+                  </span>
+                </div>
+
+                {/* Year Badge */}
+                <div className="absolute bottom-3 left-3">
+                  <span className="px-2 py-1 bg-white/90 dark:bg-gray-800/90 text-gray-700 dark:text-gray-300 rounded text-xs font-medium backdrop-blur-sm group-hover:bg-white/95 dark:group-hover:bg-gray-700/95 transition-all duration-300">
+                    {project.year}
+                  </span>
+                </div>
+              </div>
+
+              <div className="p-4 sm:p-5 lg:p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                </div>
+                
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs group-hover:bg-gray-300 dark:group-hover:bg-gray-600 transition-colors duration-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded text-xs group-hover:bg-gray-300 dark:group-hover:bg-gray-600 transition-colors duration-300">
+                      +{project.technologies.length - 3}
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex gap-2 text-sm">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-gray-800 dark:bg-gray-700 text-white rounded hover:bg-gray-700 dark:hover:bg-gray-600 hover:scale-105 transition-all duration-300"
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 hover:scale-105 transition-all duration-300"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Demo
+                    </a>
+                  )}
+                </div>
+                </div>
+              </div>
+            ))}
+            </div>
           </div>
-        </motion.div>
-      </motion.div>
-    </div>
+        </div>
+      </div>
+    </section>
   );
 }

@@ -15,9 +15,9 @@ export default function Experience() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+            <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
               My Professional Journey
-            </h3>
+            </h4>
             <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md text-sm">
               Explore my work experience from research assistant roles to software engineering internships
             </p>
