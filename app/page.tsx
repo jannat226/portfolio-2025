@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import SpiralCursorEffect from "@/components/ui/SpiralCursorEffect";
 // import CrazyEffects from "@/components/ui/CrazyEffects";
 import MagicalBackground from "@/components/ui/MagicalBackground";
-import FloatingParticles from "@/components/ui/FloatingParticles";
 import About from "@/components/About/About";
 import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
