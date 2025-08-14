@@ -6,7 +6,7 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 export default function Navbar() {
   const [theme, setTheme] = useState("light");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState("Home");
+    const [activeItem, setActiveItem] = useState("About");
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
@@ -43,7 +43,8 @@ export default function Navbar() {
     localStorage.setItem("theme", newTheme);
   };
 
-  const navItems = ["Home", "Experience", "Projects", "Tech Stack", "Contact"];
+  // const navItems = ["Home", "Experience", "Projects", "Tech Stack", "Contact"];
+    const navItems = ["About", "Experience", "Projects", "Tech Stack", "Contact"];
 
   // Custom scroll handler for smooth scroll and offset
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: string) => {
@@ -74,7 +75,7 @@ export default function Navbar() {
         
         {/* Logo - "J" on the far left */}
         <Link 
-          href="#home"
+          href="#about"
           className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold text-lg sm:text-xl rounded-full hover:scale-110 transition-transform duration-300 shadow-lg"
         >
           J
