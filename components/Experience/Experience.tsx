@@ -12,7 +12,7 @@ export default function Experience() {
 
   return (
     <div 
-      className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 transition-all duration-300 transform-gpu w-full mx-auto"
+      className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 transition-all duration-300 transform-gpu w-full mx-auto"
     >
       {/* Header */}
       <div className="text-left mb-6 sm:mb-8">

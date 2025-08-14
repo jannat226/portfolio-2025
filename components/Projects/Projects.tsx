@@ -25,7 +25,7 @@ export default function Projects() {
               {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden group transition-all duration-300 flex-shrink-0 w-80 sm:w-96 lg:w-[420px]"
+                className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden group transition-all duration-300 flex-shrink-0 w-80 sm:w-96 lg:w-[420px]"
               >
               {/* Project Image */}
               <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">

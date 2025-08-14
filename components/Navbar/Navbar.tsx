@@ -17,8 +17,8 @@ export default function Navbar() {
 
     // Scroll detection for active nav item
     const handleScroll = () => {
-      const sections = ["home", "experience", "projects", "techstack"];
-      const navItems = ["Home", "Experience", "Projects", "Tech Stack"];
+      const sections = ["home", "experience", "projects", "techstack", "contact"];
+      const navItems = ["Home", "Experience", "Projects", "Tech Stack", "Contact"];
       
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -45,7 +45,7 @@ export default function Navbar() {
     localStorage.setItem("theme", newTheme);
   };
 
-  const navItems = ["Home", "Experience", "Projects", "Tech Stack"];
+  const navItems = ["Home", "Experience", "Projects", "Tech Stack", "Contact"];
 
   return (
     <nav className="sticky top-4 left-4 right-4 z-50 mb-8">
