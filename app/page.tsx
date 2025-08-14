@@ -14,7 +14,7 @@ import ScrollAnimation from "@/components/ui/ScrollAnimation";
 export default function Home() {
   return (
     <>
-      <MagicalBackground />
+     
       <SpiralCursorEffect />
       <motion.div
         initial={{ y: -4, filter: "blur(8px)" }}
@@ -27,9 +27,19 @@ export default function Home() {
         </div>
         <div className="pt-16">
           <ScrollAnimation className="w-full" direction="scale">
-            <div id="home" className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
-              <Header />
-              <About />
+            <div
+              id="about"
+              className="px-4 sm:px-6 lg:px-8 w-full"
+            >
+              {/* Mobile: stacked, Desktop: flex */}
+              <div className="block lg:flex items-center justify-center">
+                <div className="w-full lg:w-1/2 flex flex-col items-center text-center">
+                  <Header />
+                </div>
+                <div className="w-full lg:w-1/2 flex flex-col items-center text-center mt-8 lg:mt-0">
+                  <About />
+                </div>
+              </div>
             </div>
           </ScrollAnimation>
         </div>

@@ -15,8 +15,8 @@ export default function Navbar() {
 
     // Scroll detection for active nav item
     const handleScroll = () => {
-      const sections = ["home", "experience", "projects", "techstack", "contact"];
-      const navItems = ["Home", "Experience", "Projects", "Tech Stack", "Contact"];
+      const sections = ["about", "experience", "projects", "techstack", "contact"];
+      const navItems = ["About", "Experience", "Projects", "Tech Stack", "Contact"];
       
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -49,7 +49,9 @@ export default function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: string) => {
     e.preventDefault();
     setMenuOpen(false);
-    const id = item.toLowerCase().replace(/\s/g, "");
+  let id = item.toLowerCase().replace(/\s/g, "");
+  if (item === "Tech Stack") id = "techstack";
+  if (item === "Contact") id = "contact";
     const section = document.getElementById(id);
     if (section) {
       setTimeout(() => {
@@ -80,20 +82,25 @@ export default function Navbar() {
 
         {/* Navigation Links - Desktop (far right) */}
         <div className="hidden md:flex items-center gap-2 lg:gap-3">
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(/\s/g, "")}`}
-              className={`px-3 lg:px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
-                activeItem === item 
-                  ? "bg-purple-600 text-white shadow-md" 
-                  : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-purple-600 dark:hover:text-purple-400"
-              }`}
-              onClick={(e) => handleNavClick(e, item)}
-            >
-              {item}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            let href = `#${item.toLowerCase().replace(/\s/g, "")}`;
+            if (item === "Tech Stack") href = "#techstack";
+            if (item === "Contact") href = "#contact";
+            return (
+              <a
+                key={item}
+                href={href}
+                className={`px-3 lg:px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
+                  activeItem === item 
+                    ? "bg-purple-600 text-white shadow-md" 
+                    : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-purple-600 dark:hover:text-purple-400"
+                }`}
+                onClick={(e) => handleNavClick(e, item)}
+              >
+                {item}
+              </a>
+            );
+          })}
           
           {/* Theme toggle - part of right side group */}
           <button
@@ -135,20 +142,25 @@ export default function Navbar() {
             menuOpen ? "block opacity-100 scale-100" : "hidden opacity-0 scale-95"
           }`}
         >
-          {navItems.map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(/\s/g, "")}`}
-              className={`block px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium mb-2 last:mb-0 ${
-                activeItem === item 
-                  ? "bg-purple-600 text-white shadow-md" 
-                  : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-purple-600 dark:hover:text-purple-400"
-              }`}
-              onClick={(e) => handleNavClick(e, item)}
-            >
-              {item}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            let href = `#${item.toLowerCase().replace(/\s/g, "")}`;
+            if (item === "Tech Stack") href = "#techstack";
+            if (item === "Contact") href = "#contact";
+            return (
+              <a
+                key={item}
+                href={href}
+                className={`block px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium mb-2 last:mb-0 ${
+                  activeItem === item 
+                    ? "bg-purple-600 text-white shadow-md" 
+                    : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-purple-600 dark:hover:text-purple-400"
+                }`}
+                onClick={(e) => handleNavClick(e, item)}
+              >
+                {item}
+              </a>
+            );
+          })}
         </div>
       </div>
     </nav>
