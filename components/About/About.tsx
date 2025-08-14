@@ -19,7 +19,7 @@ export default function About() {
       <p className="section-header mb-6 ">About </p>
       <div className="main-color leading-relaxed text-gray-700 dark:text-gray-200 text-base sm:text-lg lg:text-xl space-y-4">
         <p>
-          Hi, I'm <span className="font-semibold text-purple-600 dark:text-purple-400">Jannat</span> — a software engineer and <span className="font-medium text-blue-600 dark:text-blue-400">AI/ML researcher</span> pursuing my <span className="italic text-blue-600 dark:text-blue-400">M.S. in Computer Science</span> at Virginia Commonwealth University.
+          Hi, I&apos;m <span className="font-semibold text-purple-600 dark:text-purple-400">Jannat</span> — a software engineer and <span className="font-medium text-blue-600 dark:text-blue-400">AI/ML researcher</span> pursuing my <span className="italic text-blue-600 dark:text-blue-400">M.S. in Computer Science</span> at Virginia Commonwealth University.
         </p>
         
         <p>
@@ -27,7 +27,7 @@ export default function About() {
         </p>
         
         <p>
-          From optimizing <span className="font-semibold text-purple-600 dark:text-purple-400"> biomedical data pipelines </span>to building intuitive analytics tools.<br/> I love turning complex ideas into real-world solutions.<br/> When I'm not coding, you'll find me exploring new tech or playing tennis — where, unlike debugging, the ball usually plays fair.
+          From optimizing <span className="font-semibold text-purple-600 dark:text-purple-400"> biomedical data pipelines </span>to building intuitive analytics tools.<br/> I love turning complex ideas into real-world solutions.<br/> When I&apos;m not coding, you&apos;ll find me exploring new tech or playing tennis — where, unlike debugging, the ball usually plays fair.
         </p>
       </div>
     </div>

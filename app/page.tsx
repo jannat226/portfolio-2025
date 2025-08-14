@@ -79,18 +79,18 @@ export default function Home() {
                 </h2>
                 
                 <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
-                  I'm always excited to collaborate on <span className="font-semibold text-purple-600 dark:text-purple-400">cool projects</span>, discuss <span className="font-medium text-blue-600 dark:text-blue-400">innovative ideas</span>, or just chat about the latest in <span className="font-medium text-green-600 dark:text-green-400">AI/ML</span>!
+                  I&apos;m always excited to collaborate on <span className="font-semibold text-purple-600 dark:text-purple-400">cool projects</span>, discuss <span className="font-medium text-blue-600 dark:text-blue-400">innovative ideas</span>, or just chat about the latest in <span className="font-medium text-green-600 dark:text-green-400">AI/ML</span>!
                 </p>
                 
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 italic">
-                  (And yes, if you want to play tennis, I'm definitely up for that too! 🎾)
+                  (And yes, if you want to play tennis, I&apos;m definitely up for that too! 🎾)
                 </p>
                 
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jannatchehal09@gmail.com&su=Let's%20Build%20Something%20Fun!&body=Hi%20Jannat,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20love%20to%20collaborate%20on%20something%20exciting!%0D%0A%0D%0ABest%20regards," 
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jannatchehal09@gmail.com&su=Let&apos;s%20Build%20Something%20Fun!&body=Hi%20Jannat,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20love%20to%20collaborate%20on%20something%20exciting!%0D%0A%0D%0ABest%20regards," 
                     target="_blank"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                    💻 Let's Build Together!
+                    💻 Let&apos;s Build Together!
                   </a>
                   
                   <a href="https://www.linkedin.com/in/jannat-chehal/" 

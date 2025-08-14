@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { experiences } from "./data";
 import Image from "next/image";
-import { ChevronDown, ChevronUp, Calendar, Building } from "lucide-react";
+import { ChevronDown, ChevronUp, Building } from "lucide-react";
 
 export default function ExperienceTimeline() {
   const [expandedItem, setExpandedItem] = useState<number | null>(null);

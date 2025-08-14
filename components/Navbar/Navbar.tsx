@@ -7,10 +7,8 @@ export default function Navbar() {
   const [theme, setTheme] = useState("light");
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
@@ -47,6 +45,26 @@ export default function Navbar() {
 
   const navItems = ["Home", "Experience", "Projects", "Tech Stack", "Contact"];
 
+  // Custom scroll handler for smooth scroll and offset
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: string) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    const id = item.toLowerCase().replace(/\s/g, "");
+    const section = document.getElementById(id);
+    if (section) {
+      setTimeout(() => {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        // Offset correction for sticky navbar after scroll
+        setTimeout(() => {
+          const navbar = document.querySelector('nav');
+          const navHeight = navbar ? navbar.getBoundingClientRect().height : 64;
+          window.scrollBy({ top: -navHeight - 12, left: 0, behavior: "instant" });
+        }, 400);
+        setActiveItem(item);
+      }, 10);
+    }
+  };
+
   return (
     <nav className="sticky top-4 left-4 right-4 z-50 mb-8">
       {/* Main navbar container */}
@@ -63,20 +81,18 @@ export default function Navbar() {
         {/* Navigation Links - Desktop (far right) */}
         <div className="hidden md:flex items-center gap-2 lg:gap-3">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item}
-              href={`#${item.toLowerCase().replace(" ", "")}`}
+              href={`#${item.toLowerCase().replace(/\s/g, "")}`}
               className={`px-3 lg:px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
                 activeItem === item 
                   ? "bg-purple-600 text-white shadow-md" 
                   : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-purple-600 dark:hover:text-purple-400"
               }`}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
+              onClick={(e) => handleNavClick(e, item)}
             >
               {item}
-            </Link>
+            </a>
           ))}
           
           {/* Theme toggle - part of right side group */}
@@ -120,20 +136,18 @@ export default function Navbar() {
           }`}
         >
           {navItems.map((item) => (
-            <Link
+            <a
               key={item}
-              href={`#${item.toLowerCase().replace(" ", "")}`}
+              href={`#${item.toLowerCase().replace(/\s/g, "")}`}
               className={`block px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium mb-2 last:mb-0 ${
                 activeItem === item 
                   ? "bg-purple-600 text-white shadow-md" 
                   : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-purple-600 dark:hover:text-purple-400"
               }`}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
+              onClick={(e) => handleNavClick(e, item)}
             >
               {item}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, Clock, Award, TrendingUp } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ExperienceTimeline from "@/components/Experience/ExperienceTimeline";
 
 export default function ExperiencePage() {
@@ -49,7 +49,7 @@ export default function ExperiencePage() {
               Ready to Collaborate?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              I'm always open to discussing new opportunities, research collaborations, or interesting projects.
+              I&apos;m always open to discussing new opportunities, research collaborations, or interesting projects.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

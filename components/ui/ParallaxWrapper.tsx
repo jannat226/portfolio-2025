@@ -13,45 +13,72 @@ export default function ParallaxWrapper({
   className = "" 
 }: ParallaxWrapperProps) {
   const elementRef = useRef<HTMLDivElement>(null)
+  const animationId = useRef<number | null>(null)
 
   useEffect(() => {
     const element = elementRef.current
     if (!element) return
+    let ticking = false
 
-    const handleScroll = () => {
+    const updateParallax = () => {
       const scrolled = window.pageYOffset
       const rect = element.getBoundingClientRect()
       const elementTop = rect.top + scrolled
       const elementHeight = rect.height
       const windowHeight = window.innerHeight
 
-      // Only apply parallax when element is in viewport
-      if (scrolled + windowHeight > elementTop && scrolled < elementTop + elementHeight) {
+      // Only apply parallax when element is in viewport with buffer
+      const buffer = windowHeight * 0.1 // 10% buffer
+      if (scrolled + windowHeight + buffer > elementTop && 
+          scrolled - buffer < elementTop + elementHeight) {
         const yPos = -(scrolled - elementTop) * speed
+        // Use transform3d for hardware acceleration and will-change
         element.style.transform = `translate3d(0, ${yPos}px, 0)`
+        element.style.willChange = 'transform'
+      } else {
+        element.style.willChange = 'auto' // Remove will-change when not needed
       }
+      
+      ticking = false
     }
 
-    // Use requestAnimationFrame for smooth performance
-    let ticking = false
-    const requestTick = () => {
+    const handleScroll = () => {
+      
       if (!ticking) {
-        requestAnimationFrame(handleScroll)
+        animationId.current = requestAnimationFrame(updateParallax)
         ticking = true
-        setTimeout(() => { ticking = false }, 16) // ~60fps
       }
     }
 
-    window.addEventListener('scroll', requestTick, { passive: true })
-    handleScroll() // Initial call
+    // Throttle scroll events for better performance
+    let scrollTimeout: NodeJS.Timeout
+    const throttledScroll = () => {
+      clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(handleScroll, 8) // ~120fps max
+    }
+
+    window.addEventListener('scroll', throttledScroll, { passive: true })
+    updateParallax() // Initial call
 
     return () => {
-      window.removeEventListener('scroll', requestTick)
+      window.removeEventListener('scroll', throttledScroll)
+      if (animationId.current) {
+        cancelAnimationFrame(animationId.current)
+      }
+      clearTimeout(scrollTimeout)
     }
   }, [speed])
 
   return (
-    <div ref={elementRef} className={className}>
+    <div 
+      ref={elementRef} 
+      className={`${className}`}
+      style={{ 
+        willChange: 'transform',
+        backfaceVisibility: 'hidden', // Prevent flickering
+        perspective: '1000px' // Enable 3D acceleration
+      }}
+    >
       {children}
     </div>
   )

@@ -102,7 +102,7 @@ const CrazyEffects: React.FC = () => {
       />
 
       {/* Particles */}
-      {particles.map((particle, index) => (
+  {particles.map((particle) => (
         <div
           key={particle.id}
           className="absolute rounded-full animate-ping"

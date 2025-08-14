@@ -2,7 +2,7 @@
 import React from "react";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
-import { projects, type Project } from "./data";
+import { projects } from "./data";
 
 export default function Projects() {
   return (
@@ -22,7 +22,7 @@ export default function Projects() {
         <div className="flex-1 flex items-center">
           <div className="overflow-x-auto custom-scrollbar w-full">
             <div className="flex gap-4 sm:gap-6 pb-4" style={{ width: 'max-content' }}>
-              {projects.map((project, index) => (
+              {projects.map((project) => (
               <div
                 key={project.id}
                 className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden group transition-all duration-300 flex-shrink-0 w-80 sm:w-96 lg:w-[420px]"

@@ -58,7 +58,7 @@ export default function WelcomeMessage() {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="text-gray-600 dark:text-gray-300 text-lg"
             >
-              I'm Jannat - Let's explore together! ✨
+              I&apos;m Jannat - Let&apos;s explore together! ✨
             </motion.p>
             
             <motion.div

@@ -200,7 +200,7 @@ export default function InteractiveCursorExperience() {
               ✨ Welcome to my portfolio! ✨
             </div>
             <div className="animate-pulse text-lg font-medium text-transparent bg-gradient-to-r from-cyan-600 via-purple-600 to-blue-600 bg-clip-text">
-              Let's explore together! 🚀
+              Let&apos;s explore together! 🚀
             </div>
           </div>
         </div>
