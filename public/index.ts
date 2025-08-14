@@ -144,7 +144,7 @@ export const projects = [
     id: 2,
     title: "Carpooling App",
     des: "Seamlessly connect with colleagues and friends who needs a ride and those who can provide ride to the campus.",
-    img: "/Crawler.png",
+    img: "/crawlerImage.png",
     iconLists: ["reactNative.svg", "/firebase.svg", "/tail.svg"],
     link: "/ui.yoom.com",
   },

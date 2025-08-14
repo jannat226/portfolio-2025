@@ -88,7 +88,7 @@ export const projects: Project[] = [
     description: "Automation for downloading thousands of the tenders files locally from the government tender website",
     longDescription: "Automated Python script using Selenium to download thousands of tender documents from the Karnataka e-Procurement government website.",
     technologies: ["Python", "Selenium", "Web Scraping", "Automation"],
-    image: "/crawler.png",
+    image: "/crawlerImage.png",
     githubUrl: "https://bitbucket.org/jannatjiya/karnataka_eprocurement/src/main/tender_test/test_tender.py",
     featured: true,
     status: "Completed",
