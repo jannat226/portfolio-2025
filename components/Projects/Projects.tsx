@@ -50,12 +50,7 @@ export default function Projects() {
                   </span>
                 </div>
 
-                {/* Year Badge */}
-                <div className="absolute bottom-3 left-3">
-                  <span className="px-2 py-1 bg-white/90 dark:bg-gray-800/90 text-gray-700 dark:text-gray-300 rounded text-xs font-medium backdrop-blur-sm group-hover:bg-white/95 dark:group-hover:bg-gray-700/95 transition-all duration-300">
-                    {project.year}
-                  </span>
-                </div>
+                  {/* Year Badge removed as requested */}
               </div>
 
               <div className="p-4 sm:p-5 lg:p-6">

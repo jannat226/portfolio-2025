@@ -9,7 +9,6 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   status: 'Completed' | 'In Progress' | 'Planned';
-  year: string;
   highlights: string[];
 }
 
@@ -25,7 +24,6 @@ export const projects: Project[] = [
     liveUrl: "https://research-blog-rag.onrender.com/",
     featured: true,
     status: "Completed",
-    year: "2025",
     highlights: [
       "AI-powered research assistant",
       "Real research paper integration",
@@ -44,7 +42,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/NLPatVCU/GutBrainIE/tree/cnn",
     featured: true,
     status: "Completed",
-    year: "2024",
     highlights: [
       "CNN-based ensemble models",
       "PyTorch Lightning implementation",
@@ -62,7 +59,6 @@ export const projects: Project[] = [
     liveUrl: "https://drive.google.com/file/d/1VdAwLKoXmlXhQEFfOKBHm9hlzOozxRr8/view?usp=drive_link",
     featured: true,
     status: "Completed",
-    year: "2024",
     highlights: [
       "Real-time player tracking",
       "Ball trajectory analysis",
@@ -80,7 +76,6 @@ export const projects: Project[] = [
     liveUrl: "https://drive.google.com/file/d/1XxnamxQQWjIr0FCgBIVfFsJ6nYflYDKz/view?usp=drive_link",
     featured: true,
     status: "Completed",
-    year: "2023",
     highlights: [
       "Real-time ride matching",
       "Secure messaging system",
@@ -97,7 +92,6 @@ export const projects: Project[] = [
     githubUrl: "https://bitbucket.org/jannatjiya/karnataka_eprocurement/src/main/tender_test/test_tender.py",
     featured: true,
     status: "Completed",
-    year: "2021",
     highlights: [
       "Thousands of documents processed",
       "Government website automation",

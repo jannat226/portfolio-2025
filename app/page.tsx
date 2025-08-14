@@ -78,6 +78,11 @@ export default function Home() {
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 dark:bg-gray-600 text-white rounded-full hover:bg-gray-800 dark:hover:bg-gray-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                     🤝 Connect on LinkedIn
                   </a>
+                  <a href="https://discord.com/users/jenny05918"
+                    target="_blank"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                    🟦 Connect on Discord
+                  </a>
                 </div>
               </div>
             </div>
