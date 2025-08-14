@@ -28,7 +28,6 @@ export default function InteractiveCursorExperience() {
   const [particles, setParticles] = useState<Particle[]>([]);
   const [magicTrail, setMagicTrail] = useState<MagicTrail[]>([]);
   const [isFirstInteraction, setIsFirstInteraction] = useState(true);
-  const [showWelcomeEffect, setShowWelcomeEffect] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const animationRef = useRef<number | null>(null);
@@ -39,7 +38,7 @@ export default function InteractiveCursorExperience() {
     setMounted(true);
   }, []);
 
-  // Welcome explosion effect
+  //  explosion effect
   const createWelcomeExplosion = useCallback((x: number, y: number) => {
     const newParticles: Particle[] = [];
     for (let i = 0; i < 15; i++) { // Reduced from 30 to 15
@@ -68,11 +67,7 @@ export default function InteractiveCursorExperience() {
     
     if (isFirstInteraction) {
       setIsFirstInteraction(false);
-      setShowWelcomeEffect(true);
-      createWelcomeExplosion(e.clientX, e.clientY);
-      
-      // Show welcome text
-      setTimeout(() => setShowWelcomeEffect(false), 3000);
+      // Removed welcome effect and explosion
     }
 
     // Create trail particles on movement
@@ -192,19 +187,7 @@ export default function InteractiveCursorExperience() {
 
   return (
     <>
-      {/* Welcome message */}
-      {showWelcomeEffect && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none">
-          <div className="text-center">
-            <div className="animate-pulse text-2xl font-bold text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text mb-2">
-              ✨ Welcome to my portfolio! ✨
-            </div>
-            <div className="animate-pulse text-lg font-medium text-transparent bg-gradient-to-r from-cyan-600 via-purple-600 to-blue-600 bg-clip-text">
-              Let&apos;s explore together! 🚀
-            </div>
-          </div>
-        </div>
-      )}
+  {/* Welcome message removed */}
 
       {/* Cursor effects container */}
       <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden">

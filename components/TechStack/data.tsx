@@ -6,11 +6,8 @@ export const techIcons: { [key: string]: string } = {
   "React.js": "/Icons/react.svg",
   "Node.js": "/Icons/node.svg",
   "Express.js": "/Icons/express-color.svg",
-  // "TypeScript": "/Icons/typescript.svg",
   "JavaScript": "/Icons/javascript.svg",
-  // "Redux": "/Icons/redux.svg",
   "Tailwind CSS": "/Icons/tailwindcss-color.svg",
-  // "Bootstrap": "/Icons/bootstrap.svg",
   "HTML5": "/Icons/html.svg",
   "CSS3": "/Icons/css.svg",
   // "SASS": "/Icons/sass.svg",
@@ -18,7 +15,7 @@ export const techIcons: { [key: string]: string } = {
   // ⚙️ Backend & Databases
   // "Go": "/Icons/go.svg",
   // "Kotlin": "/Icons/kotlin.svg",
-  "PostgreSQL": "/Icons/postgres.png",
+  "PostgreSQL": "/Icons/PostgreSQL.svg",
   "MongoDB": "/Icons/mongodb-color.svg",
   "Firebase": "/Icons/firebase.svg",
   "MySQL": "/Icons/mysql-color.svg",
@@ -31,8 +28,6 @@ export const techIcons: { [key: string]: string } = {
   "TensorFlow": "/Icons/tensorflow-color.svg",
   "PyTorch": "/Icons/pytorch.png",
   "Scikit-Learn": "/Icons/scikitlearn-color.svg",
-  // "OpenCV": "/Icons/opencv.svg",
-  // "Keras": "/Icons/keras.svg",
   "Hugging Face": "/Icons/huggingface-color.svg",
 
   // 📊 Data Science & Analytics

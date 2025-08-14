@@ -16,7 +16,7 @@ export default function SpiralCursorEffect() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [spiralPoints, setSpiralPoints] = useState<SpiralPoint[]>([]);
   const [isFirstInteraction, setIsFirstInteraction] = useState(true);
-  const [showWelcomeEffect, setShowWelcomeEffect] = useState(false);
+  // Removed showWelcomeEffect state
   const [mounted, setMounted] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const animationRef = useRef<number | null>(null);
@@ -57,11 +57,11 @@ export default function SpiralCursorEffect() {
     
     if (isFirstInteraction) {
       setIsFirstInteraction(false);
-      setShowWelcomeEffect(true);
+  // Removed setShowWelcomeEffect (welcome effect logic)
       createWelcomeSpiral(e.clientX, e.clientY);
       
       // Auto-hide welcome message after 2 seconds
-      setTimeout(() => setShowWelcomeEffect(false), 2000);
+  // Removed setShowWelcomeEffect (welcome effect logic)
     }
 
     // Create subtle spiral trail
@@ -85,9 +85,7 @@ export default function SpiralCursorEffect() {
   }, [isFirstInteraction, createWelcomeSpiral]);
 
   // Handle welcome button click
-  const handleExploreClick = useCallback(() => {
-    setShowWelcomeEffect(false);
-  }, []);
+  // Removed unused handleExploreClick
 
   // Handle scroll
   const handleScroll = useCallback(() => {
@@ -172,56 +170,7 @@ export default function SpiralCursorEffect() {
   return (
     <>
       {/* Creative welcome message with interactive button */}
-      {showWelcomeEffect && (
-        <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-white rounded-2xl px-10 py-8 shadow-2xl border-2 border-purple-100 animate-fade-in max-w-md mx-4 text-center relative overflow-hidden">
-            {/* Decorative gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 opacity-60"></div>
-            
-            {/* Content */}
-            <div className="relative z-10">
-              {/* Icon */}
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              
-              {/* Welcome text */}
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3">
-                Welcome to my portfolio
-              </h2>
-              
-              <p className="text-gray-600 text-lg mb-6 font-medium">
-                Ready to explore amazing projects?
-              </p>
-              
-              {/* Interactive button */}
-              <button
-                onClick={handleExploreClick}
-                className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
-              >
-                <span className="flex items-center justify-center gap-2">
-                  Let&apos;s explore together
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </button>
-              
-              {/* Auto-hide indicator */}
-              <div className="mt-4 text-xs text-gray-400">
-                Auto-closing in a moment...
-              </div>
-            </div>
-            
-            {/* Floating decorative elements */}
-            <div className="absolute top-4 right-4 w-3 h-3 bg-purple-300 rounded-full animate-bounce"></div>
-            <div className="absolute bottom-6 left-6 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
-            <div className="absolute top-1/2 left-4 w-1 h-1 bg-cyan-300 rounded-full animate-ping"></div>
-          </div>
-        </div>
-      )}
+  {/* Welcome message, icon, text, button, and indicator removed */}
 
       {/* Optimized spiral cursor effects */}
       <div className="fixed inset-0 pointer-events-none z-40 overflow-hidden">
