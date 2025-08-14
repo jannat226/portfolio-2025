@@ -72,7 +72,7 @@ export default function ParallaxWrapper({
   return (
     <div 
       ref={elementRef} 
-      className={`${className}`}
+      className={`pt-16 ${className}`}
       style={{ 
         willChange: 'transform',
         backfaceVisibility: 'hidden', // Prevent flickering
