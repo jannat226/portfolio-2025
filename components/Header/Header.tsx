@@ -79,7 +79,7 @@ export default function Header() {
                 <Mail size={16} />
                 Email
               </Link>
-              <Link href="/jannat_resume_.pdf" target="_blank" 
+              <Link href="/jannat_s_Resume_SWE_.pdf" target="_blank" 
                 className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-all duration-200 hover:scale-105">
                 <FileText size={16} />
                 Resume
