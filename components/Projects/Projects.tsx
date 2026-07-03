@@ -10,7 +10,7 @@ export default function Projects() {
       <div className="w-full px-4 sm:px-6 lg:px-8 h-full flex flex-col">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white mb-4">
             Featured Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -55,7 +55,7 @@ export default function Projects() {
 
               <div className="p-4 sm:p-5 lg:p-6">
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {project.title}
                   </h3>
                 </div>
@@ -97,7 +97,7 @@ export default function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 hover:scale-105 transition-all duration-300"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-700 text-white rounded hover:bg-blue-800 hover:scale-105 transition-all duration-300"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Demo

@@ -43,7 +43,7 @@ export default function Header() {
             >
               <TypewriterEffect 
                 words={["Jannat Chehal"]}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
+                className="text-blue-700 dark:text-blue-400"
                 typeSpeed={120}
                 deleteSpeed={80}
                 delayBetweenWords={2500}
@@ -80,7 +80,7 @@ export default function Header() {
                 Email
               </Link>
               <Link href="/jannat_s_Resume_SWE_.pdf" target="_blank" 
-                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-all duration-200 hover:scale-105">
+                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-all duration-200 hover:scale-105">
                 <FileText size={16} />
                 Resume
               </Link>

@@ -50,27 +50,28 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Tennis Analysis",
+    title: "Tennis Video Analysis System",
     description: "Analyzes tennis videos for player & ball tracking and court line detection using modern computer vision.",
-    longDescription: "Comprehensive computer vision system that tracks players, ball trajectory, and court lines in tennis videos for performance analysis.",
-    technologies: ["Python", "OpenCV", "Selenium", "Computer Vision"],
+    longDescription: "Comprehensive computer vision system that tracks players, ball trajectory, and court lines in tennis videos for performance analysis, with a Streamlit dashboard for match analytics.",
+    technologies: ["Python", "YOLOv8", "OpenCV", "Streamlit"],
     image: "/tennisAnalysis.png",
     githubUrl: "https://github.com/jannat226/TennisAnalysis",
-    liveUrl: "https://drive.google.com/file/d/1VdAwLKoXmlXhQEFfOKBHm9hlzOozxRr8/view?usp=drive_link",
+    liveUrl: "https://www.youtube.com/watch?v=3LF6MpwThv8",
     featured: true,
     status: "Completed",
     highlights: [
       "Real-time player tracking",
       "Ball trajectory analysis",
-      "Court line detection"
+      "Court line detection",
+      "Streamlit analytics dashboard"
     ]
   },
   {
     id: 4,
-    title: "Carpooling App",
-    description: "Seamlessly connect with colleagues and friends who needs a ride and those who can provide ride to the campus.",
-    longDescription: "React Native mobile application that connects people needing rides with those offering rides to campus, featuring real-time matching and secure messaging.",
-    technologies: ["React Native", "Firebase", "Tailwind CSS", "Mobile Development"],
+    title: "RideShare",
+    description: "Real-time carpooling app connecting colleagues and friends who need a ride with those who can provide one to campus.",
+    longDescription: "React Native mobile application that connects people needing rides with those offering rides to campus, featuring real-time matching, secure messaging, and OpenStreetMap-based routing.",
+    technologies: ["React Native", "Firebase", "Node.js", "OpenStreetMap"],
     image: "/rideShare.png",
     githubUrl: "https://github.com/jannat226/ridesharee",
     liveUrl: "https://drive.google.com/file/d/1XxnamxQQWjIr0FCgBIVfFsJ6nYflYDKz/view?usp=drive_link",
@@ -79,7 +80,7 @@ export const projects: Project[] = [
     highlights: [
       "Real-time ride matching",
       "Secure messaging system",
-      "Campus-focused solution"
+      "OpenStreetMap-based routing"
     ]
   },
   {

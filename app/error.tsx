@@ -14,7 +14,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
         <p className="mb-4 text-base text-gray-600 dark:text-gray-300">{error?.message || "An unexpected error occurred. Please try refreshing the page."}</p>
         <button
           onClick={() => reset()}
-          className="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:scale-105 transition-transform"
+          className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:scale-105 transition-transform"
         >
           Refresh
         </button>
