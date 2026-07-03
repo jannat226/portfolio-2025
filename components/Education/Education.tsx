@@ -2,6 +2,17 @@ import React from "react";
 
 export default function Education() {
   return (
+      <><div className="section">
+      <p className="section-header">Education</p>
+      <div className="flex flex-col gap-1">
+        <p className="text-title">Virginia Commonwealth University</p>
+        <div className="flex flex-col gap-1  md:flex-row justify-between">
+          <p className="italic date-text">
+            PhD in ML and AI
+          </p>
+          <p className="date-text">Aug 2024 - Dec 2025</p>
+        </div>
+      </div>
     <><div className="section">
       <p className="section-header">Education</p>
       <div className="flex flex-col gap-1">
