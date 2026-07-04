@@ -18,12 +18,12 @@ export default function About() {
     <div className="section py-8 flex flex-col items-center justify-center w-full mx-auto">
       <p className="section-header mb-6 text-2xl font-bold text-left w-full max-w-2xl">About</p>
       <div className="main-color leading-relaxed text-gray-700 dark:text-gray-200 text-base sm:text-lg lg:text-xl space-y-6 max-w-2xl mx-auto text-justify">
-       
+
         <p>
           Hi, I&apos;m <span className="font-semibold text-blue-700 dark:text-blue-400">Jannat,</span> a PhD researcher in Computer Science at VCU. I work on vision models and vision-language models, mostly around making visual and scientific information more accessible.
         </p>
         <p>
-          Most of what I do comes down to building efficient, low-compute multimodal models, with blind and low-vision users in mind from the start rather than as an afterthought. My research is <span className="font-semibold">NIH-funded</span>, and I co-authored a paper at <span className="font-semibold">BioASQ 2025 (CLEF)</span> on biomedical information extraction.
+          Most of what I do comes down to building efficient, low-compute multimodal models, with blind and low-vision users in mind from the start rather than as an afterthought. I co-authored a paper at <span className="font-semibold">BioASQ 2025 (CLEF)</span> on biomedical information extraction.
         </p>
         <p>
           Before this I did a bit of everything, <span className="font-semibold">machine learning models</span>, <span className="font-semibold">multimodal AI accessibility</span>, <span className="font-semibold">efficient models</span>, <span className="font-semibold">RAG pipelines</span>, <span className="font-semibold">full-stack apps</span>, some <span className="font-semibold">NLP</span> on the side.
