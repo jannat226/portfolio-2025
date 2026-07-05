@@ -30,7 +30,7 @@ const degrees: Degree[] = [
     school: "University of Delhi, New Delhi, India",
     degree: "B.S., Applied Physical Science",
     date: "Jul 2019 – May 2022",
-    detail: "GPA: 3.6 · Emphasis in Mathematics and Physics",
+    detail: "GPA: 3.6",
   },
 ];
 

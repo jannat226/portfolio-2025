@@ -4,6 +4,7 @@ import About from "@/components/About/About";
 import Education from "@/components/Education/Education";
 import ResearchInterests from "@/components/ResearchInterests/ResearchInterests";
 import Publications from "@/components/Publications/Publications";
+import Scholarships from "@/components/Scholarships/Scholarships";
 import Experience from "@/components/Experience/Experience";
 import Leadership from "@/components/Leadership/Leadership";
 import Projects from "@/components/Projects/Projects";
@@ -60,6 +61,13 @@ export default function Home() {
           <ScrollAnimation className="w-full" direction="up" delay={0.1}>
             <div id="publications" className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
               <Publications />
+            </div>
+          </ScrollAnimation>
+        </div>
+        <div className="pt-8">
+          <ScrollAnimation className="w-full" direction="up" delay={0.1}>
+            <div id="scholarships" className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
+              <Scholarships />
             </div>
           </ScrollAnimation>
         </div>

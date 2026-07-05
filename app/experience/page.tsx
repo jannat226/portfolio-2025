@@ -59,10 +59,10 @@ export default function ExperiencePage() {
                 Get In Touch
               </Link>
               <Link
-                href="/resume"
+                href="/jannat_s_Resume_SWE_.pdf"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-lg font-medium transition-all duration-300 hover:scale-105"
               >
-                View Resume
+                View CV
               </Link>
             </div>
           </div>

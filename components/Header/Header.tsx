@@ -82,7 +82,7 @@ export default function Header() {
               <Link href="/jannat_s_Resume_SWE_.pdf" target="_blank" 
                 className="inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-all duration-200 hover:scale-105">
                 <FileText size={16} />
-                Resume
+                CV
               </Link>
             </motion.div>
           </div>

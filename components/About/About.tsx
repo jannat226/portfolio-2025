@@ -20,7 +20,7 @@ export default function About() {
       <div className="main-color leading-relaxed text-gray-700 dark:text-gray-200 text-base sm:text-lg lg:text-xl space-y-6 max-w-2xl mx-auto text-justify">
 
         <p>
-          Hi, I&apos;m <span className="font-semibold text-blue-700 dark:text-blue-400">Jannat,</span> a PhD researcher in Computer Science at VCU. I work on vision models and vision-language models, mostly around making visual and scientific information more accessible.
+          Hi, I&apos;m <span className="font-semibold text-blue-700 dark:text-blue-400">Jenny (Jannat),</span> a PhD researcher in Computer Science at VCU. I work on vision models and vision-language models, mostly around making visual and scientific information more accessible.
         </p>
         <p>
           Most of what I do comes down to building efficient, low-compute multimodal models, with blind and low-vision users in mind from the start rather than as an afterthought. I co-authored a paper at <span className="font-semibold">BioASQ 2025 (CLEF)</span> on biomedical information extraction.
