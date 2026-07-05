@@ -134,11 +134,10 @@ export default function Navbar() {
                 <a
                   key={item.label}
                   href={`#${item.id}`}
-                  className={`px-3 lg:px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
-                    isActive
+                  className={`px-3 lg:px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${isActive
                       ? "bg-blue-700 text-white shadow-md"
                       : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-700 dark:hover:text-blue-400"
-                  }`}
+                    }`}
                   onClick={(e) => handleNavClick(e, item.id)}
                 >
                   {item.label}
@@ -150,11 +149,10 @@ export default function Navbar() {
               <div key={item.label} className="relative group">
                 <a
                   href={`#${item.id}`}
-                  className={`flex items-center gap-1 px-3 lg:px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${
-                    isActive
+                  className={`flex items-center gap-1 px-3 lg:px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium ${isActive
                       ? "bg-blue-700 text-white shadow-md"
                       : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-700 dark:hover:text-blue-400"
-                  }`}
+                    }`}
                   onClick={(e) => handleNavClick(e, item.id)}
                 >
                   {item.label}
@@ -211,9 +209,8 @@ export default function Navbar() {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`absolute md:hidden top-16 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg px-6 py-4 rounded-2xl transition-all duration-300 border border-gray-200/20 dark:border-gray-700/30 min-w-[200px] ${
-            menuOpen ? "block opacity-100 scale-100" : "hidden opacity-0 scale-95"
-          }`}
+          className={`absolute md:hidden top-16 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg px-6 py-4 rounded-2xl transition-all duration-300 border border-gray-200/20 dark:border-gray-700/30 min-w-[200px] ${menuOpen ? "block opacity-100 scale-100" : "hidden opacity-0 scale-95"
+            }`}
         >
           {mobileNav.map((item) => {
             const isActive = item.id === activeId;
@@ -221,11 +218,10 @@ export default function Navbar() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`block px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium mb-2 last:mb-0 ${
-                  isActive
+                className={`block px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium mb-2 last:mb-0 ${isActive
                     ? "bg-blue-700 text-white shadow-md"
                     : "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-blue-700 dark:hover:text-blue-400"
-                }`}
+                  }`}
                 onClick={(e) => handleNavClick(e, item.id)}
               >
                 {item.label}

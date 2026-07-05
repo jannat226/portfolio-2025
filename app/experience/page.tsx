@@ -10,8 +10,8 @@ export default function ExperiencePage() {
       <div className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="inline-flex items-center gap-2 text-blue-700 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors font-medium"
             >
               <ArrowLeft size={20} />
@@ -28,20 +28,20 @@ export default function ExperiencePage() {
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
             Professional Journey
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-bold text-blue-700 dark:text-blue-400 mb-6">
             My Experience
           </h1>
-          
+
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive timeline of my professional journey, from research assistant roles 
+            A comprehensive timeline of my professional journey, from research assistant roles
             to software engineering internships, showcasing continuous growth and learning.
           </p>
         </div>
 
         {/* Timeline */}
         <ExperienceTimeline />
-        
+
         {/* Footer CTA */}
         <div className="mt-20 text-center">
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto border border-gray-200 dark:border-gray-700">
@@ -49,7 +49,7 @@ export default function ExperiencePage() {
               Ready to Collaborate?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              I&apos;m always open to discussing new opportunities, research collaborations, or interesting projects.
+              I&apos;m always interested in discussing new research opportunities, collaborative projects, and ideas at the intersection of AI, biomedical data, and language technologies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -59,7 +59,7 @@ export default function ExperiencePage() {
                 Get In Touch
               </Link>
               <Link
-                href="/jannat_s_Resume_SWE_.pdf"
+                href="/Jannat_CV.pdf"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-lg font-medium transition-all duration-300 hover:scale-105"
               >
                 View CV

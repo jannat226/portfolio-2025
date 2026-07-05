@@ -26,7 +26,7 @@ export default function About() {
           Most of what I do comes down to building efficient, low-compute multimodal models, with blind and low-vision users in mind from the start rather than as an afterthought. I co-authored a paper at <span className="font-semibold">BioASQ 2025 (CLEF)</span> on biomedical information extraction.
         </p>
         <p>
-          Before this I did a bit of everything, <span className="font-semibold">machine learning models</span>, <span className="font-semibold">multimodal AI accessibility</span>, <span className="font-semibold">efficient models</span>, <span className="font-semibold">RAG pipelines</span>, <span className="font-semibold">full-stack apps</span>, some <span className="font-semibold">NLP</span> on the side.
+          My work spans <span className="font-semibold">machine learning</span>, <span className="font-semibold">multimodal AI and accessibility</span>, <span className="font-semibold">efficient model design</span>, <span className="font-semibold">RAG pipelines</span>, and <span className="font-semibold">full-stack application development</span>, with a strong focus on <span className="font-semibold">NLP</span> and research-driven problem solving.
         </p>
         <p>
           Off the clock: I believe learning new skills keeps my brain active, so I&apos;m always picking up something new, though tennis is my all-time favorite, where the ball make my body move.

@@ -71,7 +71,7 @@ export default function Home() {
             </div>
           </ScrollAnimation>
         </div>
-          <div className="pt-16">
+        <div className="pt-16">
           <ScrollAnimation className="w-full" direction="up" delay={0.1}>
             <div id="leadership" className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
               <Leadership />
@@ -85,7 +85,7 @@ export default function Home() {
             </div>
           </ScrollAnimation>
         </div>
-      
+
         <div className="pt-16">
           <ScrollAnimation className="w-full" direction="left" delay={0.1}>
             <div id="projects" className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
@@ -100,27 +100,27 @@ export default function Home() {
             </div>
           </ScrollAnimation>
         </div>
-        
+
         <div className="pt-16">
           <ScrollAnimation className="w-full" direction="scale" delay={0.2}>
             <div id="contact" className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
               <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-6 py-8 transition-colors duration-300 relative z-10 w-full text-center">
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white mb-6">
-                  Want to Build Something Fun?
+                  Open to Research Collaboration
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
-                  I&apos;m always excited to collaborate on <span className="font-semibold text-blue-700 dark:text-blue-400">cool projects</span>, discuss <span className="font-medium text-blue-700 dark:text-blue-400">innovative ideas</span>, or just chat about the latest in <span className="font-medium text-green-600 dark:text-green-400">AI/ML</span>!
+                  I&apos;m excited to contribute to <span className="font-semibold text-blue-700 dark:text-blue-400">research programs</span> at the intersection of <span className="font-medium text-blue-700 dark:text-blue-400">NLP, Machine Learning, biomedical data, and image-based AI</span>, with a strong focus on building meaningful, data-driven solutions.
                 </p>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 italic">
-                  (And yes, if you want to play tennis, I&apos;m definitely up for that too! 🎾)
+                  Feel free to reach out if you think there may be a fit. 🎾
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jannatchehal09@gmail.com&su=Let&apos;s%20Build%20Something%20Fun!&body=Hi%20Jannat,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20love%20to%20collaborate%20on%20something%20exciting!%0D%0A%0D%0ABest%20regards," 
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jannatchehal09@gmail.com&su=Let&apos;s%20Build%20Something%20Fun!&body=Hi%20Jannat,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20love%20to%20collaborate%20on%20something%20exciting!%0D%0A%0D%0ABest%20regards,"
                     target="_blank"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-blue-700 hover:bg-blue-800 text-white rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                     💻 Email
                   </a>
-                  <a href="https://www.linkedin.com/in/jannat-chehal/" 
+                  <a href="https://www.linkedin.com/in/jannat-chehal/"
                     target="_blank"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 dark:bg-gray-600 text-white rounded-full hover:bg-gray-800 dark:hover:bg-gray-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                     🤝 Connect on LinkedIn
