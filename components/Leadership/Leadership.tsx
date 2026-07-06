@@ -7,9 +7,10 @@ interface Role {
 }
 
 const roles: Role[] = [
-  { title: "Vice President, Computer Science Club", org: "University of Delhi", date: "2021 – 2022" },
-  { title: "Volunteer, Enactus Society", org: "University of Delhi", date: "2020 – 2022" },
-  { title: "Core Member, Computer Science Club", org: "University of Delhi", date: "2019 – 2021" },
+  { title: "Data Analyst (Volunteer)", org: "Women of Connections (nonprofit organization)", date: "Feb 2025 – Apr 2025" },
+  { title: "Vice President", org: "Computer Science Club, University of Delhi", date: "Jul 2021 – May 2022" },
+  { title: "Volunteer", org: "Enactus Society, University of Delhi", date: "Jul 2020 – May 2022" },
+  { title: "Core Member", org: "Computer Science Club, University of Delhi", date: "Jul 2019 – May 2021" },
 ];
 
 export default function Leadership() {

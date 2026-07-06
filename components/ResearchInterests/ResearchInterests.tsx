@@ -1,7 +1,7 @@
 import React from "react";
 
 const researchInterests = [
-  "Vision–language models and information extraction from scientific figures",
+  "Vision-language models and information extraction from scientific figures",
   "Robustness of multimodal models to noisy, real-world inputs",
   "Accessibility of visual data for blind and low-vision users",
   "Retrieval-augmented generation and biomedical text mining",
