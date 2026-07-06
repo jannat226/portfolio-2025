@@ -1,9 +1,9 @@
 import React from "react";
 
 const researchInterests = [
-  "Vision-language models and information extraction from scientific figures",
+  "Vision-language tools for understanding scientific charts and figures (structured information extraction)",
   "Robustness of multimodal models to noisy, real-world inputs",
-  "Accessibility of visual data for blind and low-vision users",
+  "Accessibility tools for visual data, aimed at blind and low-vision users",
   "Retrieval-augmented generation and biomedical text mining",
 ];
 

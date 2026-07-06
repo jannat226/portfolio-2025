@@ -15,25 +15,6 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "RAG Research Platform",
-    description: "AI-powered research blogging platform with real research paper integration, vector search capabilities, and beautiful animated UI.",
-    longDescription: "A modern, full-stack blogging platform designed specifically for researchers and academics, featuring AI-powered assistance with real research paper integration from ArXiv API, Neo4j vector search capabilities, and responsive animated interface.",
-    technologies: ["React", "Node.js", "MongoDB", "Neo4j", "OpenAI", "Express", "JWT"],
-    image: "/ragResearch.png",
-    githubUrl: "https://github.com/jannat226/ragResearch",
-    liveUrl: "https://research-blog-rag.onrender.com/",
-    featured: true,
-    status: "Completed",
-    highlights: [
-      "AI-powered research assistant",
-      "Real research paper integration",
-      "Vector similarity search with Neo4j",
-      "Responsive animated UI",
-      "ArXiv API integration"
-    ]
-  },
-  {
-    id: 2,
     title: "GutBrainIE",
     description: "Designed a robust relation extraction pipeline focused on gut-brain biome axis literature.",
     longDescription: "Built multiple CNN-based models and an ensemble using PyTorch Lightning for extracting relationships from gut-brain axis research papers.",
@@ -49,7 +30,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: "Tennis Video Analysis System",
     description: "Analyzes tennis videos for player & ball tracking and court line detection using modern computer vision.",
     longDescription: "Comprehensive computer vision system that tracks players, ball trajectory, and court lines in tennis videos for performance analysis, with a Streamlit dashboard for match analytics.",
@@ -67,20 +48,39 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     title: "RideShare",
     description: "Real-time carpooling app connecting colleagues and friends who need a ride with those who can provide one to campus.",
     longDescription: "React Native mobile application that connects people needing rides with those offering rides to campus, featuring real-time matching, secure messaging, and OpenStreetMap-based routing.",
     technologies: ["React Native", "Firebase", "Node.js", "OpenStreetMap"],
     image: "/rideShare.png",
     githubUrl: "https://github.com/jannat226/ridesharee",
-    liveUrl: "https://drive.google.com/file/d/1XxnamxQQWjIr0FCgBIVfFsJ6nYflYDKz/view?usp=drive_link",
+    liveUrl: "https://drive.google.com/file/d/1XxnamxQQjIr0FCgBIVfFsJ6nYflYDKz/view?usp=drive_link",
     featured: true,
     status: "Completed",
     highlights: [
       "Real-time ride matching",
       "Secure messaging system",
       "OpenStreetMap-based routing"
+    ]
+  },
+  {
+    id: 4,
+    title: "RAG Research Platform",
+    description: "AI-powered research blogging platform with real research paper integration, vector search capabilities, and beautiful animated UI.",
+    longDescription: "A modern, full-stack blogging platform designed specifically for researchers and academics, featuring AI-powered assistance with real research paper integration from ArXiv API, Neo4j vector search capabilities, and responsive animated interface.",
+    technologies: ["React", "Node.js", "MongoDB", "Neo4j", "OpenAI", "Express", "JWT"],
+    image: "/ragResearch.png",
+    githubUrl: "https://github.com/jannat226/ragResearch",
+    liveUrl: "https://research-blog-rag.onrender.com/",
+    featured: true,
+    status: "Completed",
+    highlights: [
+      "AI-powered research assistant",
+      "Real research paper integration",
+      "Vector similarity search with Neo4j",
+      "Responsive animated UI",
+      "ArXiv API integration"
     ]
   },
   {
