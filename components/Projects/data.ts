@@ -14,6 +14,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 6,
+    title: "Adversarial YOLO Model",
+    description: "Explored robustness of YOLO-based object detection under adversarial perturbations and attack scenarios.",
+    longDescription: "Built and evaluated a YOLO-based detection workflow to study how adversarial attacks affect object detection performance and to highlight model vulnerabilities in vision systems.",
+    technologies: ["Python", "YOLO", "PyTorch", "Computer Vision", "Adversarial ML"],
+    image: "/adversarial_yolo_model_project.png",
+    githubUrl: "https://github.com/jannat226/adversarial_yolo_model",
+    featured: true,
+    status: "Completed",
+    highlights: [
+      "Adversarial attack analysis",
+      "YOLO-based object detection",
+      "Robustness evaluation"
+    ]
+  },
+  {
     id: 1,
     title: "GutBrainIE",
     description: "Designed a robust relation extraction pipeline focused on gut-brain biome axis literature.",
@@ -98,5 +114,5 @@ export const projects: Project[] = [
       "Government website automation",
       "Selenium-based scraping"
     ]
-  }
+  },
 ];
