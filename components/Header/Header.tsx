@@ -42,7 +42,7 @@ export default function Header() {
               className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-2"
             >
               <TypewriterEffect
-                words={["Jannat Chehal"]}
+                words={["Jannat"]}
                 className="text-blue-700 dark:text-blue-400"
                 typeSpeed={120}
                 deleteSpeed={80}
