@@ -8,10 +8,10 @@ const publications = [
     link: "https://ceur-ws.org/Vol-4038/paper_45.pdf",
   },
   {
-    title: "Biomedical Retrieval-Augmented Generation for Relationship Extraction",
-    venue: "In submission",
+    title: "Biomedical Retrieval-Augmented Generation for Relation Classification",
+    venue: "Frontiers in Research Metrics and Analytics, 11:1919972, 2026",
     authors: "Jannat, Dil, C., Arodz, T., & McInnes, B. T.",
-    link: "#",
+    link: "https://www.frontiersin.org/journals/research-metrics-and-analytics/articles/10.3389/frma.2026.1919972/full",
   },
   {
     title: "Relationship Extraction Using Retrieval Augmented Generation for Biomedical Datasets",
